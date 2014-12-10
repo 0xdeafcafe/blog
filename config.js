@@ -7,10 +7,8 @@ var path = require('path'),
 
 config = {
 	// ### Production
-	// When running Ghost in the wild, use the production environment
-	// Configure your URL and mail settings here
 	production: {
-		url: 'http://alxred-blog.azurewebsites.net',
+		url: 'http://words.alx.red/',
 		mail: {
 			transport: "SMTP",
 			options: {
@@ -42,22 +40,6 @@ config = {
 		// The url to use when providing links to the site, E.g. in RSS and email.
 		// Change this to your Ghost blogs published URL.
 		url: 'http://localhost:2368',
-
-		// Example mail config
-		// Visit http://support.ghost.org/mail for instructions
-		// ```
-		//  mail: {
-		//      transport: 'SMTP',
-		//      options: {
-		//          service: 'Mailgun',
-		//          auth: {
-		//              user: '', // mailgun username
-		//              pass: ''  // mailgun password
-		//          }
-		//      }
-		//  },
-		// ```
-
 		database: {
 			client: 'sqlite3',
 			connection: {
