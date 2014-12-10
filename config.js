@@ -11,7 +11,16 @@ config = {
 	// Configure your URL and mail settings here
 	production: {
 		url: 'http://alxred-blog.azurewebsites.net',
-		mail: {},
+		mail: {
+			transport: "SMTP",
+			options: {
+				service: "SendGrid",
+				auth: {
+					user: process.env.sg_user,
+					pass: process.env.sg_pass
+				}
+			}
+		},
 		database: {
 			client: 'sqlite3',
 			connection: {
