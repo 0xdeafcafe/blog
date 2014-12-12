@@ -752,6 +752,17 @@ body:not(.post-template) .post-title {
     text-decoration: none;
 }
 
+.post-title-date {
+    display: block;
+    margin: 0;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    color: #9EABB3;
+}
+
 .post-excerpt p {
     margin: 0;
     font-size: 0.9em;
@@ -769,6 +780,11 @@ body:not(.post-template) .post-title {
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
+}
+
+.post-meta > .meta-breaker {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .author-thumb {
@@ -794,7 +810,7 @@ body:not(.post-template) .post-title {
     min-height: 77px;
 }
 
-.post-date {
+.post-date, .post-comments {
     display: inline-block;
     margin-left: 8px;
     padding-left: 12px;
@@ -899,6 +915,14 @@ body:not(.post-template) .post-title {
     margin: 0 -13%;
 }
 
+/* Comments on the blog, yo */
+.post-disqusbox {
+    position: relative;
+    margin: 6rem 0 0 0;
+    padding: 6rem 0 0 0;
+    border-top: #EBF2F6 1px solid;
+}
+
 /* The author credit area after the post */
 .post-footer {
     position: relative;
@@ -959,18 +983,16 @@ body:not(.post-template) .post-title {
     top: 6rem;
     right: 0;
     width: 140px;
+    text-align: right;
 }
 
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
+    margin-top: 5px;
+    margin-left: 15px;
     color: #BBC7CC;
     text-decoration: none;
-}
-
-.post-footer .share a:hover {
-    color: #50585D;
 }
 
 /* The subscribe icon on the footer */
@@ -1335,7 +1357,6 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 @media only screen and (max-width: 900px) {
-
     .main-nav {
         padding: 15px;
     }
@@ -1549,10 +1570,6 @@ body:not(.post-template) .post-title {
         margin-right: 16px;
         padding-bottom: 2rem;
         line-height: 1.65em;
-    }
-
-    .post-date {
-        display: none;
     }
 
     .post-template .post-header {
@@ -1782,3 +1799,67 @@ body:not(.post-template) .post-title {
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+
+/* ==========================================================================
+   Hey, fuck you ghost. I know how the fuck css works.
+   Below this point is my tweaks to ghost. I like them.
+   you don't understand me mum.
+   ========================================================================== */
+
+/* Sharing */
+.index-share {
+    margin-top: 15px;
+    text-align: left;
+}
+.index-share > h4 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #9EABB3;
+    text-transform: uppercase;
+}
+.index-share > .social-icon {
+    margin-right: 10px;
+}
+.index-share > .social-icon:hover{
+    text-decoration: none;
+}
+
+/* Global Social Icon stuff */
+.social-icon {
+    -webkit-transition: color .3s !important;;
+    transition: color .3s !important;;
+}
+.icon-twitter:hover {
+    color: #4099ff !important;
+}
+.icon-facebook:hover {
+    color: #335795 !important;
+}
+.icon-google-plus:hover {
+    color: #dd4b39 !important;
+}
+
+/* Disqus Comments */
+.cmd_disqus {
+    height: 6rem;
+    max-width: 780px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #7F7F7F;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+    transition: border ease 0.3s;
+    margin: 0 0 5rem;
+    padding: 0;
+    background: none;
+    transition: background-color ease-in 0.3s, border-color ease-out 0.4s, color ease-out 0.4s;
+}
+
+.cmd_disqus:hover {
+    border-color: #7F7F7F;
+    color: #fff;
+    background: #7F7F7F;
+}
