@@ -1808,17 +1808,19 @@ body:not(.post-template) .post-title {
 
 /* Sharing */
 .index-share {
-    margin-top: 15px;
+    margin-top: -18px;
+    margin-bottom: 10px;
     text-align: left;
 }
 .index-share > h4 {
     font-size: 1.3rem;
     font-weight: 300;
-    color: #9EABB3;
     text-transform: uppercase;
 }
 .index-share > .social-icon {
     margin-right: 10px;
+    color: #9EABB3;
+    text-decoration: none;
 }
 .index-share > .social-icon:hover{
     text-decoration: none;

@@ -1,2 +1,8 @@
 # don't let these guys party
 node_modules
+
+# hide the database - if it were ever to be touched
+.db
+
+# nope
+content/images
